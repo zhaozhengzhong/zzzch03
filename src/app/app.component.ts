@@ -1,28 +1,37 @@
 import { Component } from '@angular/core';
+import { Product } from './product';
 
 @Component({
-  selector: 'app-root',
+  selector: 'inventory-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string;
-  imgUrl: string;
-  url: string
+  products: Product[];
   constructor() {
-    this.title = "aaa";
-    this.imgUrl = './assets/imgs/aa.jpg';
-    this.url = 'http://www.4399.com';
+    this.products = [
+      new Product(
+        'MYSHOES',
+        'Black Running Shoes',
+        '/assets/imgs/black-shoes.jpg',
+        ['Men', 'Shoes', 'Running Shoes'],
+        109.99),
+      new Product(
+        'NEATOJACKET',
+        'Blue Jacket',
+        '/assets/imgs/blue-jacket.jpg',
+        ['Women', 'Apparel', 'Jackets & Vests'], 238.99),
+      new Product(
+        'NICEHAT',
+        'A Nice Black Hat',
+        '/assets/imgs/black-hat.jpg',
+        ['Men', 'Accessories', 'Hats'],
+        29.99)
+    ];
+
   }
-  onBtn() {
-    console.log(1);
-  }
-  onIpt(evt: Event) {
-    this.title = (<HTMLInputElement>evt.target).value
-  }
-  addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
-    console.log(`Adding article title: ${title.value} and link: ${link.value}`);
-    return false;
+  onProductSle(product: Product) {
+    console.log('aaaa');
   }
 }
 
