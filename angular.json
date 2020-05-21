@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "inventory-app": {
+    "ch08": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/inventory-app",
+            "outputPath": "dist/ch08",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "inventory-app:build"
+            "browserTarget": "ch08:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "inventory-app:build:production"
+              "browserTarget": "ch08:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "inventory-app:build"
+            "browserTarget": "ch08:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "inventory-app:serve"
+            "devServerTarget": "ch08:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "inventory-app:serve:production"
+              "devServerTarget": "ch08:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "inventory-app"
+  "defaultProject": "ch08"
 }
